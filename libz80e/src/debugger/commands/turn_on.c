@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include "debugger/commands.h"
 #include "debugger/debugger.h"
 #include "ti/hardware/interrupts.h"

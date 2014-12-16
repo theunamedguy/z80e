@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include "ti/asic.h"
 #include "debugger/debugger.h"
 

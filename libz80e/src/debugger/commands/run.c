@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include <string.h>
 
 #include "ti/asic.h"

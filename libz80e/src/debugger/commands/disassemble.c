@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include "core/cpu.h"
 
 #include "debugger/commands.h"

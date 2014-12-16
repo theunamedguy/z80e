@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include <strings.h>
 #include "debugger/commands.h"
 #include "debugger/debugger.h"
