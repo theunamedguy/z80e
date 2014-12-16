@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include "ti/hardware/speed.h"
 #include <stdint.h>
 #include <stdlib.h>

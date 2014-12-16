@@ -18,9 +18,9 @@ Z80E_OBJ := $(call c2obj, $(Z80E_SRC))
 # add source files to OTHER_SRC to get automatic dependencies
 OTHER_SRC += $(Z80E_SRC)
 
-Z80EFLAGS = $(filter-out -O%,$(PLUGINFLAGS)) -O2 -I$(Z80ESRCDIR)/libz80e/include/z80e -I$(Z80ESRCDIR)/libz80e/include
+Z80EFLAGS = $(filter-out -O%,$(PLUGINFLAGS)) -O2 -I$(Z80ESRCDIR)/libz80e/include/z80e -I$(Z80ESRCDIR) -I$(Z80ESRCDIR)/libz80e/include
 
-$(Z80EBUILDDIR)/z80e.rock: $(Z80E_OBJ)
+$(Z80EBUILDDIR)/z80e.rock: $(Z80E_OBJ) $(TLSFLIB)
 
 $(Z80EBUILDDIR)/%.o: $(Z80ESRCDIR)/%.c $(Z80ESRCDIR)/z80e.make
 	$(SILENT)mkdir -p $(dir $@)

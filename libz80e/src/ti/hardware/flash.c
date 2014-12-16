@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include "ti/asic.h"
 #include "log/log.h"
 #include "ti/memory.h"

@@ -40,7 +40,7 @@ fi
 set -e
 echo "Copying z80e sources to $ROCKBOX_DIR/apps/plugins/z80e ..."
 mkdir -p $ROCKBOX_DIR/apps/plugins/z80e
-cp z80e.c SOURCES z80e.make $ROCKBOX_DIR/apps/plugins/z80e/
+cp z80e.c SOURCES z80e.make frontend.h $ROCKBOX_DIR/apps/plugins/z80e/
 cp -R ../../libz80e $ROCKBOX_DIR/apps/plugins/z80e/
 if [[ `tail $ROCKBOX_DIR/apps/plugins/SUBDIRS -n 1` != "z80e" ]]; then
     echo "Appending z80e to $ROCKBOX_DIR/apps/plugins/SUBDIRS ..."

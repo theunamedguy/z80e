@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include "runloop/runloop.h"
 #include <stdlib.h>
 #include <stdio.h>
@@ -16,10 +17,9 @@ static uint64_t orwl_timestart = 0;
 #endif
 
 long long get_time_nsec() {
-#ifdef EMSCRIPTEN
+#if defined(EMSCRIPTEN)
 	return emscripten_get_now() * 1000000;
-#else
-#ifdef APPLE
+#elif defined(APPLE)
 	if (!orwl_timestart) {
 		mach_timebase_info_data_t tb = { 0 };
 		mach_timebase_info(&tb);
@@ -32,12 +32,13 @@ long long get_time_nsec() {
 	t.tv_sec = diff * ORWL_NANO;
 	t.tv_nsec = diff - (t.tv_sec * ORWL_GIGA);
 	return t.tv_nsec;
+#elif defined(ROCKBOX)
+	return *rb->current_tick*(1000000000/HZ);
 #else
 	struct timespec sp;
 	clock_gettime(CLOCK_MONOTONIC, &sp);
 
 	return sp.tv_sec * 1000000000 + sp.tv_nsec;
-#endif
 #endif
 }
 

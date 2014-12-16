@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include <stdio.h>
 #include <stdint.h>
 #include "core/registers.h"

@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include "ti/hardware/t6a04.h"
 
 #include <stdlib.h>

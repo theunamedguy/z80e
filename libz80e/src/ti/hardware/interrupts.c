@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include "ti/hardware/interrupts.h"
 #include "log/log.h"
 

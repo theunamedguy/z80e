@@ -1,3 +1,4 @@
+#include "frontend.h"
 #include "log/log.h"
 
 #include <limits.h>
